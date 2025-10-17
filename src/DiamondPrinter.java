@@ -10,6 +10,13 @@ public class DiamondPrinter {
             printChars('*', stars);
             System.out.println();
         }
+        for (int i = n - 1; i >= 1; i--) {
+            int spaces = n - i;
+            int stars = 2 * i - 1;
+            printChars(' ', spaces);
+            printChars('*', stars);
+            System.out.println();
+        }
 
     }
 
