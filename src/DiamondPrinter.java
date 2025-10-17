@@ -17,7 +17,35 @@ public class DiamondPrinter {
             printChars('*', stars);
             System.out.println();
         }
+    }
 
+    public static void printHollowDiamond(int n) {
+        for (int i = 1; i <= n; i++) {
+            int spaces = n - i;
+            printChars(' ', spaces);
+            if (i == 1) {
+                System.out.print("*");
+            } else {
+                System.out.print("*");
+                int innerSpaces = 2 * i - 3;
+                printChars(' ', innerSpaces);
+                System.out.println("*");
+            }
+            System.out.println();
+        }
+        for (int i = n - 1; i >= 1; i--) {
+            int spaces = n - i;
+            printChars(' ', spaces);
+            if (i == 1) {
+                System.out.print("*");
+            } else {
+                System.out.print("*");
+                int innerSpaces = 2 * i - 3;
+                printChars(' ', innerSpaces);
+                System.out.println("*");
+            }
+            System.out.println();
+        }
     }
 
     private static void printChars(char ch, int count) {
