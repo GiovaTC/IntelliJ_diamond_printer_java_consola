@@ -52,5 +52,29 @@ public class DiamondPrinter {
         for (int i = 0; i < count; i++) System.out.print(ch);
     }
 
-    public static void main(String[] args) {}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduce el tamaño n (>=1). presiona ENTER para usar 4: ");
+        String line = sc.nextLine().trim();
+        int n;
+        if (line.isEmpty()) {
+            n = 4;
+        } else {
+            try {
+                n = Integer.parseInt(line);
+                if (n < 1) {
+                    System.out.println("n debe ser >= 1 . usando 4 por defecto.");
+                    n = 4;
+                }
+            } catch ( NumberFormatException e) {
+                System.out.println("entrada inválida. usando 4  por defecto.");
+                n = 4;
+            }
+        }
+        System.out.println("\n--- rombo relleno (n = " + n + ") ---");
+        printFilledDiamond(n);
+        System.out.println("\n--- rombo hueco (n = " + n + ") ---");
+        printHollowDiamond(n);
+        sc.close();
+    }
 }
