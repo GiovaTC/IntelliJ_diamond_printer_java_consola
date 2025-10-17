@@ -1,6 +1,7 @@
+# IntelliJ_diamond_printer_java_consola .
 
 <p align="center">
-  <img src="./giovaTC_logo.png" alt="giovaTC logo" width="160"/>
+  <img width="200" height="80" alt="giovaTC_logo" src="https://github.com/user-attachments/assets/46833b6f-0174-4322-8d46-d4d9f46e24ec" />
 </p>
 
 <h1 align="center">💎 DiamondPrinter – Programa Java para imprimir un rombo en consola</h1>
